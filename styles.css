@@ -1,11 +1,16 @@
 
-body{
-    overflow-x:hidden ;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
+
 nav{
     display:flex;
     flex-direction: row;
-    flex-flow: row wrap;
+
     align-items:space-between;
 }
 .logo{
@@ -13,14 +18,18 @@ nav{
     height:80px;
     margin:30px 20px 30px 10px;
 }
-p{
-  /* font-family: 'Montserrat', sans-serif; */
+.sayhello{
+  display: flex;
+  margin: 40px 20px 0px 0px;
+  justify-items: center;
+  
+
 }
   .mentorship{
     color: black; /* Link text color */
     text-decoration: none;
     height:20px;
-    margin:30px 40px 30px 850px;
+    margin-right: 20px;
     font-size: 20px;
   }
   .mentorship:hover{
@@ -28,23 +37,52 @@ p{
     text-decoration: none;
   }
   .contact{
-    margin:40px 10px 30px 0px;
+   
     color:#6936F5;
-    /* width:50px;*/
     
-    height:40px; 
+    height:10px; 
     width:120px;
-    background-color: white;
+    background-color: white; 
         /* background-color: #4CAF50; Green background color */
          /* Text color */
-         padding:0px 10px 40px 10px;  
-        border: 2px solid #6E07F3; /* No border */
-        border-radius: 45px; /* Rounded corners */
+        padding:15px 10px 25px 10px;  
+        border: 2px solid #6E07F3;
+        border-radius: 45px; 
      cursor: pointer; 
       
       
-      /* Styling the hover state of the button */
+   
      
+  }
+  .image__overlay button{
+    color:#6936F5;
+margin-top: 0px;
+margin-bottom: 0px;
+    height:10px; 
+    width:120px;
+    background-color:rgb(0, 0, 0); 
+        /* background-color: #4CAF50; Green background color */
+         /* Text color */
+        padding:15px 10px 25px 10px;  
+        border: 2px solid #6E07F3;
+        border-radius: 45px; 
+     cursor: pointer; 
+      
+
+  }
+  .image__overlay button a:hover{
+    color:#6E07F3;
+  }
+  .image__overlay button:hover{
+background-color: white;
+  }
+  .image__overlay p{
+   
+    
+    font-size: 17px;
+  }
+  .image__description{
+    text-align: center;
   }
   .contact:hover {
     background-color:#6E07F3;; 
@@ -83,13 +121,16 @@ p{
     margin:0px -10px 0px -10px;
     text-align: center;
     color:white;
-    background-color: #6E07F3;
+
+    /* background-color:#6E07F3; */
+    background-color:black;
     z-index: -1; 
 }
   .name{
     font-size: 35px;
     margin-top:120px ;
   }
+
   .intro{
     font-size: 19px ;
     margin:10px 0px 250px 0px;
@@ -155,6 +196,9 @@ p{
   .habits{
     color: #6E07F3;
   }
+  #experience{
+margin-top:20px;
+  }
   .skill_container p{
     
 font-size:17px;
@@ -169,4 +213,470 @@ line-height: 28px;
 }
 .skill_container h1{
   font-size: 25px;
+}
+h1{
+  text-align: center;
+}
+
+*{
+  margin:0%;
+  padding:0%;
+box-sizing:border-box;
+
+}
+
+#project
+#move_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.project{
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+}
+/* 
+canvas {
+ position: relative;
+ top:-150px;
+ bottom: -50px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  
+} */
+#canvas-container {
+  width: 100%; /* Set your desired width here */
+  height: 200px; /* Set your desired height here */
+  margin-right: 20px;
+  margin-top: 30px;
+
+
+}
+#mycanvas{
+
+ background-color:black; 
+
+ 
+  width: 100%;
+  height: 100%;
+   
+}
+
+h1{
+  font-size: 40px;
+}
+#container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.image {
+
+	position: relative;
+	width: 400px;
+  height: 300px;
+  opacity: 0.8;
+ 
+}
+
+.image__img {
+	display: block;
+	width: 100%;
+  border-radius: 20px;
+}
+
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+  border-radius: 20px;
+}
+
+.image__overlay--primary {
+	background:#009578;
+  border-radius: 20px;
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.50s;
+  border-radius: 20px;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+  border-radius: 20px;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+  border-radius: 20px;
+}
+
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+}
+
+.banner{
+  margin-left:50px;
+  margin-right:50px;
+  position: relative;
+  top:80px;
+  color:white;
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-around;
+  background-color: #141c3a;
+}
+.banner h1 {
+  margin:70px 30px 70px 30px;
+}
+.banner h4{
+  margin:85px 30px 70px 30px;
+}
+.banner button {
+  border:2px solid #5BE9B9;
+  background-color: black;
+  margin:70px 30px 70px 30px;
+  width:200px;
+  color:white;
+}
+.banner button:hover {
+background-color: #5BE9B9;
+}
+
+body, html {
+ 
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.footer {
+  text-align: center;
+  background-color: #6936F5;
+  font-size: large;
+  padding: 20px 0;
+  margin-top: auto; 
+  margin-bottom: 0px;/* Ensures the footer is at the bottom */
+}
+
+.living {
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  line-height: 30px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
+.icons i {
+  font-size: 40px; /* Adjust size as needed */
+  margin: 100px 80px 20px 150px;
+  color: black; /* Ensure icon color matches design */
+  border: 2px solid white; /* Circular border */
+  border-radius: 70%; /* Makes the border circular */
+  padding: 20px; /* Adjust padding to control the size of the circle */
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.icons i:hover {
+  background-color: white; /* Change background color on hover */
+    color: #6936F5 ; /* Adjust hover color as needed */
+}
+.copyright{
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+main{
+  flex-grow:1 ;
+
+}
+section{
+  width:100%;
+}
+
+.visit{
+  margin-top:30px; 
+}
+/* Contact Page Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  background-color: #fff;
+  margin: 100px auto;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.contact-container label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #6E07F3;
+  outline: none;
+  box-shadow: 0 0 5px rgba(110, 7, 243, 0.5);
+}
+
+.contact-container textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.send-email {
+  background-color: #FFD700;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.send-email:hover {
+  background-color: #ffc107;
+}
+
+.back-button {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #6E07F3;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit;        /* Inherits the text color from the parent element */
+}
+
+/* For mobile devices (up to 600px wide) */
+@media (max-width: 600px) {
+
+
+  .heading {
+      font-size: 35px;
+  }
+
+  .subheading {
+      font-size: 18px;
+  }
+
+  .animated_pic {
+      width: 40%;
+      left:30%;
+  }
+
+  .computer_pic {
+      width: 100%;
+      left: 0;
+  }
+#canvas-container{
+  height: 500px;
+}
+  .skill_container {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+.developer,.designer,.mentor{
+  margin:0px
+}
+
+  #container {      
+    display: flex;             
+      flex-direction: column;
+      justify-items: space-around;
+      align-items: center;
+      
+  }
+
+  .image {
+      width: 90%;
+      height: 40%;
+      margin-top:20px;
+  }
+
+  .banner {
+    display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    
+  }
+  .banner h1{
+   
+    margin: 20px;
+  }
+  .banner h4{
+    
+    margin: 20px;
+  }
+  .banner button{
+    margin:20px;
+  }
+
+  .icons i {
+    
+  margin: 0px;
+   
+  }
+
+  .icon-link {
+    margin:0px; /* Increase margin between icons */
+  }
+
+  .living {
+    font-size: 20px;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+
+  .icons a {
+      font-size: 20px;
+  }
+
+
+/* For tablets (up to 900px wide) */
+@media (max-width: 900px) {
+  .heading {
+      font-size: 40px;
+  }
+
+  .subheading {
+      font-size: 20px;
+  }
+
+  .skill_container {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+.developer,.designer,.mentor{
+  margin:0px
+}
+#container {
+  flex-direction:column;
+  justify-content:space-around;
+  align-items: center;
+
+  
+}
+
+
+
+
+  .image {
+      width: 80%;
+      height: 40%;
+      margin-top:20px;
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+  }
+  .icons i{
+    margin:0px;
+  }
+  .banner h4{
+    margin-right:5px;
+  }
+  .banner button{
+    margin-right: 10px;
+    margin-left:10px ;
+    padding-left: 5px;
+    padding-right:5px;
+  }
+  .banner h4{
+    margin: 85px 10px 70px 30px;
+  }
+ 
 }
