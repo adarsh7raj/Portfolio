@@ -533,7 +533,14 @@ a {
   text-decoration: none; /* Removes the underline */
   color: inherit;        /* Inherits the text color from the parent element */
 }
-
+@media(max-width:500px){
+  .sayhello{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+}
 /* For mobile devices (up to 600px wide) */
 @media (max-width: 600px) {
 
